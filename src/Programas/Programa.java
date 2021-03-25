@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Programa {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        Conta conta = new Conta();
+        Conta conta = new Conta(null);
         int opcao = -1;
 
 

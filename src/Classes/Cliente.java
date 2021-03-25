@@ -1,8 +1,13 @@
 
+
 public class Cliente {
     private String nome;
     private String cpf;
     protected Conta conta;
+
+    public Cliente(String nome){
+        this.nome = nome;
+    }
     
 
     public Cliente (String nome, Conta conta) {
