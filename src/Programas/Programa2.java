@@ -1,9 +1,5 @@
-package Programas;
-
 import java.util.Scanner;
 
-import Classes.Cliente;
-import Classes.Conta;
 
 public class Programa2 {
     public static void main(String[] args) {

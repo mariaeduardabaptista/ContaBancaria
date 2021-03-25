@@ -1,5 +1,3 @@
-package Classes;
-
 public class Conta {
 
     private TipoOperacao operacao;
@@ -53,4 +51,9 @@ public class Conta {
 
     System.out.println("O saldo atual é: R$" + this.saldo);
  }
+
+
+
+	public void setLimiteCretido(double limiteCredito) {
+	}
 }

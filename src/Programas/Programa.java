@@ -1,10 +1,5 @@
-package Programas;
 
 import java.util.Scanner;
-
-import Classes.Conta;
-
-import Classes.TipoOperacao;
 
 public class Programa {
     public static void main(String[] args) {
