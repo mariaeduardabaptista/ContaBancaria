@@ -3,7 +3,7 @@ package Classes;
 public class Cliente {
     private String nome;
     private String cpf;
-    private Conta conta;
+    protected Conta conta;
     
 
     public Cliente (String nome, Conta conta) {
