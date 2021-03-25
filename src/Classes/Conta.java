@@ -6,16 +6,15 @@ public class Conta {
     private Cliente cliente;
 
 
+public Conta(Cliente cliente){
+    this.setCliente(cliente);
+    cliente.setConta(this);
+    
+}
 
 
 
     //#region
-    public TipoOperacao getOperacao() {
-        return operacao;
-    }
-   
-    
-
     public Cliente getCliente() {
         return cliente;
     }
@@ -27,6 +26,10 @@ public class Conta {
     }
 
 
+    public TipoOperacao getOperacao() {
+        return operacao;
+    }
+   
 
     public double getValorOperacao() {
         return valorOperacao;
@@ -41,6 +44,9 @@ public class Conta {
     
     //#endregion
 
+
+
+
     public void realizaOperacao(TipoOperacao operacao, double valor) {
         this.operacao = operacao;
         this.valorOperacao = valor;
@@ -48,21 +54,17 @@ public class Conta {
         if (operacao == TipoOperacao.SAQUE) {
                 this.saldo = this.saldo - valor;
                 System.out.println("Saque realizado com sucesso");
-            }
+            } else
                 System.out.println("Não há saldo suficiente para realizar o saque");
 
         
-          if (operacao == TipoOperacao.DEPOSITO) {
+        if   (operacao == TipoOperacao.DEPOSITO) {
               this.saldo = this.saldo + valor;
-              System.out.println("Deposisto realizado com sucesso.");
+              System.out.println("Deposito realizado com sucesso.");
 
           }
 
     System.out.println("O saldo atual é: R$" + this.saldo);
- }
- public Conta(Cliente cliente){
-     this.setCliente(cliente);
-     cliente.setConta(this);
-     
- }
+        }
+ 
 }

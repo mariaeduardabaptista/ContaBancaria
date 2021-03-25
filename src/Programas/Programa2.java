@@ -4,8 +4,9 @@ import java.util.Scanner;
 public class Programa2 {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        Conta conta = new Conta(null);
-        Cliente cliente = new Cliente("maria", conta);
+        Cliente cliente = new Cliente("maria");
+        Conta conta = new Conta(cliente);
+        
         int opcao = -1;
 
 
@@ -21,13 +22,13 @@ public class Programa2 {
                 default:
                   System.out.println("Operaçao invalida.Verifique");
                 case 1:
-                  exibeSaque(ler, cliente);
+                  exibeSaque(ler, conta.getCliente());
                   break;
                 case 2:
-                  exibeDeposito(ler, cliente);
+                  exibeDeposito(ler, conta.getCliente());
                   break;
                 case 3:
-                  exibeSaldo(cliente);
+                  exibeSaldo(conta.getCliente());
                   break;
 
             }
